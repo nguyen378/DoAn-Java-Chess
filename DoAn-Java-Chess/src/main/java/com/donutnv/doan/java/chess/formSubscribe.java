@@ -40,6 +40,8 @@ public class formSubscribe extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         txtpassword1 = new javax.swing.JPasswordField();
         jSeparator5 = new javax.swing.JSeparator();
+        btnback1 = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,17 +126,50 @@ public class formSubscribe extends javax.swing.JFrame {
         jPanel5.add(txtpassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
         jPanel5.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 280, 30));
 
+        btnback1.setBackground(new java.awt.Color(51, 51, 51));
+        btnback1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnback1.setForeground(new java.awt.Color(255, 255, 255));
+        btnback1.setText("Back");
+        btnback1.setBorder(null);
+        btnback1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnback1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnback1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
+        btnback.setBackground(new java.awt.Color(51, 51, 51));
+        btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnback.setForeground(new java.awt.Color(255, 255, 255));
+        btnback.setText("Back");
+        btnback.setBorder(null);
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnback)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -214,6 +249,24 @@ public class formSubscribe extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtpassword1FocusLost
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        formIndex2 id2 = new formIndex2();
+        // Ẩn form đăng nhập hiện tại
+        this.setVisible(false);
+        // Hiển thị form mới
+        id2.setVisible(true);
+    }//GEN-LAST:event_btnbackActionPerformed
+
+    private void btnback1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnback1ActionPerformed
+        // TODO add your handling code here:
+        formIndex2 id2 = new formIndex2();
+        // Ẩn form đăng nhập hiện tại
+        this.setVisible(false);
+        // Hiển thị form mới
+        id2.setVisible(true);
+    }//GEN-LAST:event_btnback1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -253,6 +306,8 @@ public class formSubscribe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnback;
+    private javax.swing.JButton btnback1;
     private javax.swing.JButton btnsubcribe;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

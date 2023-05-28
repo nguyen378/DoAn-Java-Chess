@@ -38,6 +38,7 @@ public class formEmail extends javax.swing.JFrame {
         txtconfirmcode = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
+        btnback = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,21 +112,29 @@ public class formEmail extends javax.swing.JFrame {
         jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 190, 30));
         jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 190, 30));
 
+        btnback.setBackground(new java.awt.Color(51, 51, 51));
+        btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnback.setForeground(new java.awt.Color(255, 255, 255));
+        btnback.setText("Back");
+        btnback.setBorder(null);
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 487, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -179,6 +188,15 @@ public class formEmail extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnsendcodeActionPerformed
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        formIndex2 id2 = new formIndex2();
+        // Ẩn form đăng nhập hiện tại
+        this.setVisible(false);
+        // Hiển thị form mới
+        id2.setVisible(true);
+    }//GEN-LAST:event_btnbackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -216,6 +234,7 @@ public class formEmail extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btnconfirmcode;
     private javax.swing.JButton btnsendcode;
     private javax.swing.JLabel jLabel3;

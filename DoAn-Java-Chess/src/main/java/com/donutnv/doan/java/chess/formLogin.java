@@ -49,13 +49,14 @@ public class formLogin extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
         txtpassword = new javax.swing.JPasswordField();
-        btnforgotpassword = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
         btnsignup = new javax.swing.JButton();
         btnlogin = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
+        btnforgotpassword1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,17 +114,17 @@ public class formLogin extends javax.swing.JFrame {
         });
         jPanel5.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
-        btnforgotpassword.setBackground(new java.awt.Color(51, 51, 51));
-        btnforgotpassword.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
-        btnforgotpassword.setForeground(new java.awt.Color(255, 255, 255));
-        btnforgotpassword.setText("Forgot Password");
-        btnforgotpassword.setBorder(null);
-        btnforgotpassword.addActionListener(new java.awt.event.ActionListener() {
+        btnback.setBackground(new java.awt.Color(51, 51, 51));
+        btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnback.setForeground(new java.awt.Color(255, 255, 255));
+        btnback.setText("Back");
+        btnback.setBorder(null);
+        btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnforgotpasswordActionPerformed(evt);
+                btnbackActionPerformed(evt);
             }
         });
-        jPanel5.add(btnforgotpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 80, -1));
+        jPanel5.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
 
         btnsignup.setBackground(new java.awt.Color(51, 51, 51));
         btnsignup.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
@@ -155,6 +156,18 @@ public class formLogin extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Do not have an account ?");
         jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 550, 210, -1));
+
+        btnforgotpassword1.setBackground(new java.awt.Color(51, 51, 51));
+        btnforgotpassword1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnforgotpassword1.setForeground(new java.awt.Color(255, 255, 255));
+        btnforgotpassword1.setText("Forgot Password");
+        btnforgotpassword1.setBorder(null);
+        btnforgotpassword1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnforgotpassword1ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnforgotpassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 80, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -210,14 +223,14 @@ public class formLogin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtpasswordFocusLost
 
-    private void btnforgotpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnforgotpasswordActionPerformed
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
         // TODO add your handling code here:
-       formEmail forgot = new formEmail();
+       formIndex2 id2 = new formIndex2();
         // Ẩn form đăng nhập hiện tại
         this.setVisible(false);
         // Hiển thị form mới
-        forgot.setVisible(true);
-    }//GEN-LAST:event_btnforgotpasswordActionPerformed
+        id2.setVisible(true);
+    }//GEN-LAST:event_btnbackActionPerformed
 
     private void btnsignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsignupActionPerformed
         // TODO add your handling code here:
@@ -263,6 +276,10 @@ public class formLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtusernameActionPerformed
 
+    private void btnforgotpassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnforgotpassword1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnforgotpassword1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -295,7 +312,8 @@ public class formLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnforgotpassword;
+    private javax.swing.JButton btnback;
+    private javax.swing.JButton btnforgotpassword1;
     private javax.swing.JButton btnlogin;
     private javax.swing.JButton btnsignup;
     private javax.swing.JLabel jLabel1;

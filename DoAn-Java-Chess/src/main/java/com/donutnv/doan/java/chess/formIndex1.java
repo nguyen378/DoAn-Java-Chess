@@ -4,6 +4,12 @@
  */
 package com.donutnv.doan.java.chess;
 
+import com.donutnv.doan.java.chess.display.GameBoard;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
+
 /**
  *
  * @author Chi Nguyen
@@ -27,14 +33,17 @@ public class formIndex1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        popupMenu1 = new java.awt.PopupMenu();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        btnplay1 = new javax.swing.JButton();
+        btnpuzzles1 = new javax.swing.JButton();
+        btnlearn1 = new javax.swing.JButton();
+        btnwatch1 = new javax.swing.JButton();
+        btnnews1 = new javax.swing.JButton();
+        btnmore1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -43,6 +52,12 @@ public class formIndex1 extends javax.swing.JFrame {
 
         jLabel2.setText("jLabel2");
 
+        jMenu1.setText("jMenu1");
+
+        jMenuItem1.setText("jMenuItem1");
+
+        popupMenu1.setLabel("popupMenu1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(java.awt.SystemColor.windowBorder);
@@ -50,41 +65,51 @@ public class formIndex1 extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
         jPanel2.setForeground(new java.awt.Color(51, 51, 51));
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("PLay");
-        jButton1.setBorder(null);
+        btnplay1.setBackground(new java.awt.Color(51, 51, 51));
+        btnplay1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnplay1.setForeground(new java.awt.Color(255, 255, 255));
+        btnplay1.setText("PLay");
+        btnplay1.setBorder(null);
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText(" Puzzles");
-        jButton2.setBorder(null);
+        btnpuzzles1.setBackground(new java.awt.Color(51, 51, 51));
+        btnpuzzles1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnpuzzles1.setForeground(new java.awt.Color(255, 255, 255));
+        btnpuzzles1.setText(" Puzzles");
+        btnpuzzles1.setBorder(null);
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Learn");
-        jButton3.setBorder(null);
+        btnlearn1.setBackground(new java.awt.Color(51, 51, 51));
+        btnlearn1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnlearn1.setForeground(new java.awt.Color(255, 255, 255));
+        btnlearn1.setText("Learn");
+        btnlearn1.setBorder(null);
+        btnlearn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnlearn1ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
-        jButton4.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Watch");
-        jButton4.setBorder(null);
+        btnwatch1.setBackground(new java.awt.Color(51, 51, 51));
+        btnwatch1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnwatch1.setForeground(new java.awt.Color(255, 255, 255));
+        btnwatch1.setText("Watch");
+        btnwatch1.setBorder(null);
 
-        jButton5.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("News");
-        jButton5.setBorder(null);
+        btnnews1.setBackground(new java.awt.Color(51, 51, 51));
+        btnnews1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnnews1.setForeground(new java.awt.Color(255, 255, 255));
+        btnnews1.setText("News");
+        btnnews1.setBorder(null);
+        btnnews1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnnews1ActionPerformed(evt);
+            }
+        });
 
-        jButton7.setBackground(new java.awt.Color(51, 51, 51));
-        jButton7.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("More");
-        jButton7.setBorder(null);
+        btnmore1.setBackground(new java.awt.Color(51, 51, 51));
+        btnmore1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        btnmore1.setForeground(new java.awt.Color(255, 255, 255));
+        btnmore1.setText("More");
+        btnmore1.setBorder(null);
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
@@ -97,16 +122,13 @@ public class formIndex1 extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(55, Short.MAX_VALUE))
+                    .addComponent(btnlearn1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnpuzzles1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnplay1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnwatch1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnnews1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnmore1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,17 +136,17 @@ public class formIndex1 extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnplay1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnpuzzles1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnlearn1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnwatch1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnnews1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnmore1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -133,12 +155,22 @@ public class formIndex1 extends javax.swing.JFrame {
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("vs Computer");
         jButton6.setBorder(null);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(51, 51, 51));
         jButton8.setFont(new java.awt.Font("Segoe Print", 0, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("New Game");
         jButton8.setBorder(null);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\bcm.jpg")); // NOI18N
 
@@ -199,6 +231,34 @@ public class formIndex1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnnews1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnews1ActionPerformed
+        // TODO add your handling code here:
+        try{
+            Desktop.getDesktop().browse(new URL("https://vnexpress.net/the-thao/cac-mon-khac/co-vua").toURI());
+        }
+        catch(IOException | URISyntaxException e)
+        {}
+    }//GEN-LAST:event_btnnews1ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        GameBoard gb = new GameBoard();
+        this.setVisible(false);
+        gb.setVisible(true);
+        
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btnlearn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlearn1ActionPerformed
+        // TODO add your handling code here:
+        GameBoard fl = new GameBoard();
+        this.setVisible(false);
+        fl.setVisible(true);
+    }//GEN-LAST:event_btnlearn1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -236,19 +296,22 @@ public class formIndex1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btnlearn1;
+    private javax.swing.JButton btnmore1;
+    private javax.swing.JButton btnnews1;
+    private javax.swing.JButton btnplay1;
+    private javax.swing.JButton btnpuzzles1;
+    private javax.swing.JButton btnwatch1;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private java.awt.PopupMenu popupMenu1;
     // End of variables declaration//GEN-END:variables
 }

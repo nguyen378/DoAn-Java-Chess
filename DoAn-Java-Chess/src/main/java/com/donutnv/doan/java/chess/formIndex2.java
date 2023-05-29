@@ -4,6 +4,12 @@
  */
 package com.donutnv.doan.java.chess;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
+
 /**
  *
  * @author Chi Nguyen
@@ -55,18 +61,33 @@ public class formIndex2 extends javax.swing.JFrame {
         btnplay.setForeground(new java.awt.Color(255, 255, 255));
         btnplay.setText("PLay");
         btnplay.setBorder(null);
+        btnplay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnplayActionPerformed(evt);
+            }
+        });
 
         btnpuzzles.setBackground(new java.awt.Color(51, 51, 51));
         btnpuzzles.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnpuzzles.setForeground(new java.awt.Color(255, 255, 255));
         btnpuzzles.setText(" Puzzles");
         btnpuzzles.setBorder(null);
+        btnpuzzles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnpuzzlesActionPerformed(evt);
+            }
+        });
 
         btnleanrn.setBackground(new java.awt.Color(51, 51, 51));
         btnleanrn.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnleanrn.setForeground(new java.awt.Color(255, 255, 255));
         btnleanrn.setText("Learn");
         btnleanrn.setBorder(null);
+        btnleanrn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnleanrnActionPerformed(evt);
+            }
+        });
 
         btnwatch.setBackground(new java.awt.Color(51, 51, 51));
         btnwatch.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
@@ -79,12 +100,22 @@ public class formIndex2 extends javax.swing.JFrame {
         btnnews.setForeground(new java.awt.Color(255, 255, 255));
         btnnews.setText("News");
         btnnews.setBorder(null);
+        btnnews.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnnewsActionPerformed(evt);
+            }
+        });
 
         btnmore.setBackground(new java.awt.Color(51, 51, 51));
         btnmore.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnmore.setForeground(new java.awt.Color(255, 255, 255));
         btnmore.setText("More");
         btnmore.setBorder(null);
+        btnmore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmoreActionPerformed(evt);
+            }
+        });
 
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
@@ -115,17 +146,22 @@ public class formIndex2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnmore, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnplay, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnpuzzles, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnleanrn, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnwatch, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnnews, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(44, 44, 44)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnmore, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnplay, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnpuzzles, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnleanrn, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnwatch, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnnews, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(jButton9))))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,11 +180,11 @@ public class formIndex2 extends javax.swing.JFrame {
                 .addComponent(btnnews, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnmore, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(37, 37, 37)
                 .addComponent(jButton9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton10)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         btnplayonline.setBackground(new java.awt.Color(51, 51, 51));
@@ -156,6 +192,11 @@ public class formIndex2 extends javax.swing.JFrame {
         btnplayonline.setForeground(new java.awt.Color(255, 255, 255));
         btnplayonline.setText("PLay Online");
         btnplayonline.setBorder(null);
+        btnplayonline.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnplayonlineActionPerformed(evt);
+            }
+        });
 
         jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\abancooo.jpg")); // NOI18N
 
@@ -172,6 +213,11 @@ public class formIndex2 extends javax.swing.JFrame {
         btnplaycomputer.setForeground(new java.awt.Color(255, 255, 255));
         btnplaycomputer.setText("PLay Computer");
         btnplaycomputer.setBorder(null);
+        btnplaycomputer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnplaycomputerActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -254,6 +300,112 @@ public class formIndex2 extends javax.swing.JFrame {
         // Hiển thị form mới
         dangnhap.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void btnplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplayActionPerformed
+        // TODO add your handling code here:
+        int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    
+    }//GEN-LAST:event_btnplayActionPerformed
+
+    private void btnpuzzlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpuzzlesActionPerformed
+        // TODO add your handling code here:
+        int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnpuzzlesActionPerformed
+
+    private void btnleanrnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnleanrnActionPerformed
+        // TODO add your handling code here:
+        int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnleanrnActionPerformed
+
+    private void btnnewsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewsActionPerformed
+        // TODO add your handling code here:
+         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnnewsActionPerformed
+
+    private void btnmoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoreActionPerformed
+        // TODO add your handling code here:
+         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnmoreActionPerformed
+
+    private void btnplayonlineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplayonlineActionPerformed
+        // TODO add your handling code here:
+         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnplayonlineActionPerformed
+
+    private void btnplaycomputerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplaycomputerActionPerformed
+        // TODO add your handling code here:
+         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
+    
+        if (result == JOptionPane.YES_OPTION) {
+            // Nếu chọn Yes, mở form đăng nhập (formLogin)
+            formLogin loginForm = new formLogin();
+            loginForm.setVisible(true);
+        } else if (result == JOptionPane.NO_OPTION) {
+            // Nếu chọn No, mở form đăng ký (formSubscribe)
+            formSubscribe subscribeForm = new formSubscribe();
+            subscribeForm.setVisible(true);
+        }
+    }//GEN-LAST:event_btnplaycomputerActionPerformed
 
     /**
      * @param args the command line arguments

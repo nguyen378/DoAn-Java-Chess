@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.donutnv.doan.java.chess.display;
+package com.donutnv.doan.java.chess;
 
 
 
+import com.donutnv.doan.java.chess.display.*;
 import com.donutnv.doan.java.chess.pieces.AbstractPiece;
 import com.donutnv.doan.java.chess.pieces.Bishop;
 import com.donutnv.doan.java.chess.pieces.King;
@@ -44,7 +45,7 @@ public class GameBoard extends javax.swing.JFrame {
     public static JLabel turnLabel;
 
     /**
-     * Creates new form GameBoard
+     * Creates new form Gameboard
      */
     public GameBoard() {
         initComponents();
@@ -195,6 +196,20 @@ public class GameBoard extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GameBoard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

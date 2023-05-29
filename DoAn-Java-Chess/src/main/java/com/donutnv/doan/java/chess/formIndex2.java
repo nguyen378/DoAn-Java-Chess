@@ -85,8 +85,12 @@ public class formIndex2 extends javax.swing.JFrame {
         btnmore.setForeground(new java.awt.Color(255, 255, 255));
         btnmore.setText("More");
         btnmore.setBorder(null);
+        btnmore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmoreActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
 
         jButton9.setBackground(new java.awt.Color(102, 102, 102));
@@ -157,8 +161,6 @@ public class formIndex2 extends javax.swing.JFrame {
         btnplayonline.setText("PLay Online");
         btnplayonline.setBorder(null);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\abancooo.jpg")); // NOI18N
-
         jLabel5.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Online #1");
@@ -213,7 +215,7 @@ public class formIndex2 extends javax.swing.JFrame {
                             .addComponent(btnplayonline, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(btnplaycomputer, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(63, 63, 63)
@@ -254,6 +256,13 @@ public class formIndex2 extends javax.swing.JFrame {
         // Hiển thị form mới
         dangnhap.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void btnmoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoreActionPerformed
+
+        formMore formMore = new formMore();
+        this.setVisible(false);
+        formMore.setVisible(true);
+    }//GEN-LAST:event_btnmoreActionPerformed
 
     /**
      * @param args the command line arguments

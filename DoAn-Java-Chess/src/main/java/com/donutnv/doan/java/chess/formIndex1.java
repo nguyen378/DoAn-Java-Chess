@@ -39,12 +39,11 @@ public class formIndex1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         btnplay1 = new javax.swing.JButton();
-        btnpuzzles1 = new javax.swing.JButton();
         btnlearn1 = new javax.swing.JButton();
-        btnwatch1 = new javax.swing.JButton();
         btnnews1 = new javax.swing.JButton();
         btnmore1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        btnback = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -71,12 +70,6 @@ public class formIndex1 extends javax.swing.JFrame {
         btnplay1.setText("PLay");
         btnplay1.setBorder(null);
 
-        btnpuzzles1.setBackground(new java.awt.Color(51, 51, 51));
-        btnpuzzles1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        btnpuzzles1.setForeground(new java.awt.Color(255, 255, 255));
-        btnpuzzles1.setText(" Puzzles");
-        btnpuzzles1.setBorder(null);
-
         btnlearn1.setBackground(new java.awt.Color(51, 51, 51));
         btnlearn1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnlearn1.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,12 +80,6 @@ public class formIndex1 extends javax.swing.JFrame {
                 btnlearn1ActionPerformed(evt);
             }
         });
-
-        btnwatch1.setBackground(new java.awt.Color(51, 51, 51));
-        btnwatch1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        btnwatch1.setForeground(new java.awt.Color(255, 255, 255));
-        btnwatch1.setText("Watch");
-        btnwatch1.setBorder(null);
 
         btnnews1.setBackground(new java.awt.Color(51, 51, 51));
         btnnews1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
@@ -114,6 +101,17 @@ public class formIndex1 extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
 
+        btnback.setBackground(new java.awt.Color(51, 51, 51));
+        btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
+        btnback.setForeground(new java.awt.Color(255, 255, 255));
+        btnback.setText("Back");
+        btnback.setBorder(null);
+        btnback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -123,26 +121,24 @@ public class formIndex1 extends javax.swing.JFrame {
                 .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnlearn1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnpuzzles1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnplay1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnwatch1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnnews1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnmore1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(61, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addComponent(btnback)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(btnplay1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnpuzzles1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(btnlearn1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnwatch1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnnews1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -252,9 +248,18 @@ public class formIndex1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        // TODO add your handling code here:
+        formLogin id2 = new formLogin();
+        // Ẩn form đăng nhập hiện tại
+        this.setVisible(false);
+        // Hiển thị form mới
+        id2.setVisible(true);
+    }//GEN-LAST:event_btnbackActionPerformed
+
     private void btnlearn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlearn1ActionPerformed
         // TODO add your handling code here:
-        GameBoard fl = new GameBoard();
+        GameBoard1 fl = new GameBoard1();
         this.setVisible(false);
         fl.setVisible(true);
     }//GEN-LAST:event_btnlearn1ActionPerformed
@@ -296,12 +301,11 @@ public class formIndex1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnback;
     private javax.swing.JButton btnlearn1;
     private javax.swing.JButton btnmore1;
     private javax.swing.JButton btnnews1;
     private javax.swing.JButton btnplay1;
-    private javax.swing.JButton btnpuzzles1;
-    private javax.swing.JButton btnwatch1;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel2;

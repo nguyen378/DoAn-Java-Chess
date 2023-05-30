@@ -6,6 +6,10 @@ package com.donutnv.doan.java.chess;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -149,8 +153,8 @@ public class formLogin extends javax.swing.JFrame {
         });
         jPanel5.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 450, 290, 60));
         jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 290, 30));
-        jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 280, 30));
-        jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 280, 30));
+        jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 260, 30));
+        jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 260, 30));
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -278,8 +282,34 @@ public class formLogin extends javax.swing.JFrame {
 
     private void btnforgotpassword1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnforgotpassword1ActionPerformed
         // TODO add your handling code here:
+        formResetPass reset = new formResetPass();
+        // Ẩn form đăng nhập hiện tại
+        this.setVisible(false);
+        // Hiển thị form mới
+        reset.setVisible(true);
     }//GEN-LAST:event_btnforgotpassword1ActionPerformed
 
+     private void loadData() {
+    try (Connection connection = DBConnection.getConnection()) {
+        String query = "SELECT * FROM PLAYER";
+        PreparedStatement statement = connection.prepareStatement(query);
+        ResultSet resultSet = statement.executeQuery();
+
+        while (resultSet.next()) {
+            // Lấy dữ liệu từ ResultSet
+            String EMAIL = resultSet.getString("EMAIL");
+            String NAME = resultSet.getString("NAME");
+            // ...
+
+            // Đổ dữ liệu vào các thành phần trên JFrame
+            txtusername.setText(EMAIL);
+            txtpassword.setText(NAME);
+            // ...
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+}
     /**
      * @param args the command line arguments
      */

@@ -85,6 +85,11 @@ public class formIndex2 extends javax.swing.JFrame {
         btnmore.setForeground(new java.awt.Color(255, 255, 255));
         btnmore.setText("More");
         btnmore.setBorder(null);
+        btnmore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmoreActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("jLabel4");
 
@@ -251,6 +256,10 @@ public class formIndex2 extends javax.swing.JFrame {
         // Hiển thị form mới
         dangnhap.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void btnmoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoreActionPerformed
+
+    }//GEN-LAST:event_btnmoreActionPerformed
 
     /**
      * @param args the command line arguments

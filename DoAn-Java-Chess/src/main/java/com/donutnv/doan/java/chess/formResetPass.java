@@ -139,28 +139,14 @@ public class formResetPass extends javax.swing.JFrame {
 
     private void btncontinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncontinueActionPerformed
 
-        // TODO add your handling code here:
-        String username = txtresetpass.getText();
-        String password = new String(txtEnterpass.getPassword());
-        StringBuilder sb = new StringBuilder();
-        if(username .equals("")){
-            sb.append("Password is empty \n");
-        }
-        if(password.equals("")){
-            sb.append("Password is empty \n");
-        }
-        if (sb.length()>0){
-            JOptionPane.showMessageDialog(this, sb.toString(), "Invalidation",JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        if(username.equals("User1") && password.equals("chess123")){
-            JOptionPane.showMessageDialog(this,"Login successfully");
-
-           
-        }
-        else{
-            JOptionPane.showMessageDialog(this,"Invalid username or password","Failure",JOptionPane.ERROR_MESSAGE);
-        }
+     //   if (password.equals(passwordAgain)) {
+                // Mật khẩu trùng khớp
+                javax.swing.JOptionPane.showMessageDialog(this, "Đăng ký thành công");
+                formLogin lg = new formLogin();
+                // Ẩn form đăng nhập hiện tại
+                this.setVisible(false);
+                // Hiển thị form mới
+            lg.setVisible(true);
     }//GEN-LAST:event_btncontinueActionPerformed
 
     private void txtresetpassFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtresetpassFocusLost

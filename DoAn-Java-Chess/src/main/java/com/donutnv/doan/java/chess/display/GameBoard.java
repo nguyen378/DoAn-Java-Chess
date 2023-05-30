@@ -29,9 +29,9 @@ public class GameBoard extends javax.swing.JFrame {
 
     public static final Font TEXT_FONT = new Font("Arial", Font.PLAIN, 20);
     public static final Font BUTTON_FONT = new Font("Arial Unicode MS", Font.PLAIN, 65);
-    public static final Color LIGHT_COLOR = new Color(213, 168, 119);
-    public static final Color DARK_COLOR = new Color(147, 73, 25);
-    public static final Color MOVE_COLOR = new Color(173, 251, 133);
+    public static final Color LIGHT_COLOR = new Color(239,255,191);
+    public static final Color DARK_COLOR = new Color(0,153,51);
+    public static final Color MOVE_COLOR = new Color(204,255,51);
 
     public static AbstractPiece movingPiece = null;
     public static int[] from = null;

@@ -4,6 +4,10 @@
  */
 package com.donutnv.doan.java.chess;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -16,7 +20,7 @@ public class formSubscribe extends javax.swing.JFrame {
     /**
      * Creates new form formSignIn
      */
-    public formSubscribe() {
+        public formSubscribe() {
         initComponents();
     }
 
@@ -38,10 +42,11 @@ public class formSubscribe extends javax.swing.JFrame {
         btnsubcribe = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        txtpassword1 = new javax.swing.JPasswordField();
+        txtpw2 = new javax.swing.JPasswordField();
         jSeparator5 = new javax.swing.JSeparator();
         btnback1 = new javax.swing.JButton();
-        btnback = new javax.swing.JButton();
+        txtpw1 = new javax.swing.JPasswordField();
+        jSeparator6 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,6 +99,11 @@ public class formSubscribe extends javax.swing.JFrame {
                 txtyournameFocusLost(evt);
             }
         });
+        txtyourname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtyournameActionPerformed(evt);
+            }
+        });
         jPanel5.add(txtyourname, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, -1, -1));
 
         btnsubcribe.setBackground(new java.awt.Color(102, 102, 102));
@@ -105,26 +115,26 @@ public class formSubscribe extends javax.swing.JFrame {
                 btnsubcribeActionPerformed(evt);
             }
         });
-        jPanel5.add(btnsubcribe, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 500, 290, 60));
+        jPanel5.add(btnsubcribe, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 560, 290, 60));
         jPanel5.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 280, 30));
         jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 280, 30));
 
-        txtpassword1.setBackground(new java.awt.Color(51, 51, 51));
-        txtpassword1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        txtpassword1.setForeground(new java.awt.Color(255, 255, 255));
-        txtpassword1.setText("Password");
-        txtpassword1.setBorder(null);
-        txtpassword1.setEchoChar('\u0000');
-        txtpassword1.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtpw2.setBackground(new java.awt.Color(51, 51, 51));
+        txtpw2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        txtpw2.setForeground(new java.awt.Color(255, 255, 255));
+        txtpw2.setText("Enter Password");
+        txtpw2.setBorder(null);
+        txtpw2.setEchoChar('\u0000');
+        txtpw2.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txtpassword1FocusGained(evt);
+                txtpw2FocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtpassword1FocusLost(evt);
+                txtpw2FocusLost(evt);
             }
         });
-        jPanel5.add(txtpassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
-        jPanel5.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 280, 30));
+        jPanel5.add(txtpw2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, -1, -1));
+        jPanel5.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 510, 280, 30));
 
         btnback1.setBackground(new java.awt.Color(51, 51, 51));
         btnback1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
@@ -138,38 +148,34 @@ public class formSubscribe extends javax.swing.JFrame {
         });
         jPanel5.add(btnback1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, -1));
 
-        btnback.setBackground(new java.awt.Color(51, 51, 51));
-        btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
-        btnback.setForeground(new java.awt.Color(255, 255, 255));
-        btnback.setText("Back");
-        btnback.setBorder(null);
-        btnback.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnbackActionPerformed(evt);
+        txtpw1.setBackground(new java.awt.Color(51, 51, 51));
+        txtpw1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        txtpw1.setForeground(new java.awt.Color(255, 255, 255));
+        txtpw1.setText("Password");
+        txtpw1.setBorder(null);
+        txtpw1.setEchoChar('\u0000');
+        txtpw1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtpw1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtpw1FocusLost(evt);
             }
         });
+        jPanel5.add(txtpw1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
+        jPanel5.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 280, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(btnback)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -199,11 +205,10 @@ public class formSubscribe extends javax.swing.JFrame {
 
     private void txtyournameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtyournameFocusGained
         // TODO add your handling code here:
-        if(txtyourname.getText().equals("Password")){
+        if(txtyourname.getText().equals("Your Name")){
             txtyourname.setText(null);
             txtyourname.requestFocus();
 
-            txtyourname.setEchoChar('*');
             removePlaceholderStyle(txtyourname);
         }
     }//GEN-LAST:event_txtyournameFocusGained
@@ -212,51 +217,62 @@ public class formSubscribe extends javax.swing.JFrame {
         // TODO add your handling code here:
         if(txtyourname.getText().length()==0){
             addPlaceholderStyle(txtyourname);
-            txtyourname.setText("Password");
+            txtyourname.setText("Your Name");
             txtyourname.setEchoChar('\u0000');
         }
     }//GEN-LAST:event_txtyournameFocusLost
 
     private void btnsubcribeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsubcribeActionPerformed
 
-        String username = txtusername.getText();
-        String password = new String(txtyourname.getPassword());
-        StringBuilder sb = new StringBuilder();
-        if(username .equals("")){
-            sb.append("Username is empty \n");
-        }
-        if(password.equals("")){
-            sb.append("Password is empty \n");
-        }
-        if (sb.length()>0){
-            JOptionPane.showMessageDialog(this, sb.toString(), "Invalidation",JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        if(username.equals("User1") && password.equals("chess123")){
-            JOptionPane.showMessageDialog(this,"Login successfully");
+                String email = txtusername.getText();
+                String name = txtyourname.getText();
+                String password = new String(txtpw1.getPassword());
+                String passwordAgain = new String(txtpw2.getPassword());
 
-        }
-        else{
-            JOptionPane.showMessageDialog(this,"Invalid username or password","Failure",JOptionPane.ERROR_MESSAGE);
-        }
+                if (!password.equals(passwordAgain)) {
+                    JOptionPane.showMessageDialog(null, "Mật khẩu không trùng khớp, vui lòng nhập lại");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Đăng ký thành công!");
+                    // TODO add your handling code here:
+                    formLogin dangnhap = new formLogin();
+                   // Ẩn form đăng nhập hiện tại
+                   this.setVisible(false);
+                   // Hiển thị form mới
+                   dangnhap.setVisible(true);
+                   // ...
+                    // Sau khi kết nối thành công
+                    String sql = "UPDATE PLAYER SET MATKHAU = ? WHERE PLAYER = ?";
+                    try (PreparedStatement statement = DBConnection.prepareStatement(sql)) {
+                        String user2 = null;
+                        statement.setString(1, user2);
+                        String a456 = null;
+                        statement.setString(2, a456);
+                        int rowsAffected = statement.executeUpdate();
+                        System.out.println(rowsAffected + " rows updated.");
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
     }//GEN-LAST:event_btnsubcribeActionPerformed
 
-    private void txtpassword1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpassword1FocusGained
+    private void txtpw2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpw2FocusGained
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtpassword1FocusGained
+        if(txtpw2.getText().equals("Enter Password")){
+            txtpw2.setText(null);
+            txtpw2.requestFocus();
 
-    private void txtpassword1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpassword1FocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpassword1FocusLost
+            txtpw2.setEchoChar('*');
+            removePlaceholderStyle(txtpw2);
+        }
+    }//GEN-LAST:event_txtpw2FocusGained
 
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+    private void txtpw2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpw2FocusLost
         // TODO add your handling code here:
-        formIndex2 id2 = new formIndex2();
-        // Ẩn form đăng nhập hiện tại
-        this.setVisible(false);
-        // Hiển thị form mới
-        id2.setVisible(true);
-    }//GEN-LAST:event_btnbackActionPerformed
+        if(txtpw2.getText().length()==0){
+            addPlaceholderStyle(txtpw2);
+            txtpw2.setText("Enter Password");
+        }
+    }//GEN-LAST:event_txtpw2FocusLost
 
     private void btnback1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnback1ActionPerformed
         // TODO add your handling code here:
@@ -266,6 +282,30 @@ public class formSubscribe extends javax.swing.JFrame {
         // Hiển thị form mới
         id2.setVisible(true);
     }//GEN-LAST:event_btnback1ActionPerformed
+
+    private void txtpw1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpw1FocusGained
+        // TODO add your handling code here:
+        if(txtpw1.getText().equals("Password")){
+            txtpw1.setText(null);
+            txtpw1.requestFocus();
+
+            txtpw1.setEchoChar('*');
+            removePlaceholderStyle(txtpw1);
+        }
+    }//GEN-LAST:event_txtpw1FocusGained
+
+    private void txtpw1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtpw1FocusLost
+        // TODO add your handling code here:
+        if(txtpw1.getText().length()==0){
+            addPlaceholderStyle(txtpw1);
+            txtpw1.setText("Password");
+        }
+    }//GEN-LAST:event_txtpw1FocusLost
+
+    private void txtyournameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtyournameActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtyournameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -306,7 +346,6 @@ public class formSubscribe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnback;
     private javax.swing.JButton btnback1;
     private javax.swing.JButton btnsubcribe;
     private javax.swing.JLabel jLabel2;
@@ -316,7 +355,9 @@ public class formSubscribe extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JPasswordField txtpassword1;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JPasswordField txtpw1;
+    private javax.swing.JPasswordField txtpw2;
     private javax.swing.JTextField txtusername;
     private javax.swing.JPasswordField txtyourname;
     // End of variables declaration//GEN-END:variables
@@ -328,4 +369,5 @@ public class formSubscribe extends javax.swing.JFrame {
     private void addPlaceholderStyle(JTextField txtusername) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
 }

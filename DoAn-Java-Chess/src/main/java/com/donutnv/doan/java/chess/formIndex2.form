@@ -122,18 +122,27 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel4" alignment="0" pref="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton9" max="32767" attributes="0"/>
-                          <Component id="btnmore" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="btnplay" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="btnpuzzles" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="btnleanrn" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="btnwatch" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="btnnews" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="jButton10" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jButton10" min="-2" pref="87" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="btnmore" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnplay" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnpuzzles" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnleanrn" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnwatch" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                      <Component id="btnnews" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="jButton9" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <EmptySpace pref="58" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -154,11 +163,11 @@
                       <Component id="btnnews" min="-2" pref="19" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnmore" min="-2" pref="19" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="jButton9" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jButton10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="155" max="32767" attributes="0"/>
+                      <EmptySpace pref="161" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -180,6 +189,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnplayActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnpuzzles">
               <Properties>
@@ -197,6 +209,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnpuzzlesActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnleanrn">
               <Properties>
@@ -214,6 +229,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnleanrnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnwatch">
               <Properties>
@@ -248,6 +266,9 @@
                   <Border info="null"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnnewsActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnmore">
               <Properties>
@@ -326,6 +347,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnplayonlineActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
         </Component>
@@ -367,6 +391,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnplaycomputerActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

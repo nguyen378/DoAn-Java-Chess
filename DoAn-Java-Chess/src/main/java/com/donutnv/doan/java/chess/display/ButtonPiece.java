@@ -19,7 +19,6 @@ public class ButtonPiece extends JButton implements ActionListener{
         this.add(label);
         this.setPreferredSize(new Dimension(10,10));
         this.spot = spot;
-        
         this.setBackground(color);
         this.addActionListener(this);
     }

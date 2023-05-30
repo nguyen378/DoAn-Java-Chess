@@ -259,7 +259,7 @@ public class formIndex2 extends javax.swing.JFrame {
                             .addComponent(btnplayonline, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(btnplaycomputer, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(63, 63, 63)
@@ -304,7 +304,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplayActionPerformed
         // TODO add your handling code here:
         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -314,13 +314,13 @@ public class formIndex2 extends javax.swing.JFrame {
             formSubscribe subscribeForm = new formSubscribe();
             subscribeForm.setVisible(true);
         }
-    
+
     }//GEN-LAST:event_btnplayActionPerformed
 
     private void btnpuzzlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnpuzzlesActionPerformed
         // TODO add your handling code here:
         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -335,7 +335,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnleanrnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnleanrnActionPerformed
         // TODO add your handling code here:
         int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -350,7 +350,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnnewsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnewsActionPerformed
         // TODO add your handling code here:
          int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -365,7 +365,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnmoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoreActionPerformed
         // TODO add your handling code here:
          int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -380,7 +380,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnplayonlineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplayonlineActionPerformed
         // TODO add your handling code here:
          int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();
@@ -395,7 +395,7 @@ public class formIndex2 extends javax.swing.JFrame {
     private void btnplaycomputerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnplaycomputerActionPerformed
         // TODO add your handling code here:
          int result = JOptionPane.showConfirmDialog(this, "Bạn đã có tài khoản chưa?", "Xác nhận", JOptionPane.YES_NO_OPTION);
-    
+
         if (result == JOptionPane.YES_OPTION) {
             // Nếu chọn Yes, mở form đăng nhập (formLogin)
             formLogin loginForm = new formLogin();

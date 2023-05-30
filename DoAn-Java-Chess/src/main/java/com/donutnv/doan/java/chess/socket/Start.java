@@ -15,6 +15,11 @@ import com.donutnv.doan.java.chess.socket.chess_game.gui.Table;
 
 //To Start The game ( main class)
 public class Start {
+    
+    public Start()
+    {
+        Table table = new Table();
+    }
 
     public static void main(String[] args) {
         Table table = new Table();

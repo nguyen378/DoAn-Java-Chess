@@ -5,6 +5,7 @@
 package com.donutnv.doan.java.chess;
 
 import com.donutnv.doan.java.chess.display.GameBoard;
+import com.donutnv.doan.java.chess.socket.Start;
 import java.awt.Desktop;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -229,23 +230,22 @@ public class formIndex1 extends javax.swing.JFrame {
 
     private void btnnews1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnews1ActionPerformed
         // TODO add your handling code here:
-        try{
+        try {
             Desktop.getDesktop().browse(new URL("https://vnexpress.net/the-thao/cac-mon-khac/co-vua").toURI());
+        } catch (IOException | URISyntaxException e) {
         }
-        catch(IOException | URISyntaxException e)
-        {}
     }//GEN-LAST:event_btnnews1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        GameBoard gb = new GameBoard();
-        this.setVisible(false);
-        gb.setVisible(true);
-        
+        Start client = new Start();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        GameBoard gb = new GameBoard();
+        this.setVisible(false);
+        gb.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed

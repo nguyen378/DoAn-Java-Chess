@@ -92,28 +92,13 @@ public class formIndex1 extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("News");
-        jButton5.setBorder(null);
-
-        jButton7.setBackground(new java.awt.Color(51, 51, 51));
-        jButton7.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("More");
-        jButton7.setBorder(null);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
         btnmore1.setBackground(new java.awt.Color(51, 51, 51));
         btnmore1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnmore1.setForeground(new java.awt.Color(255, 255, 255));
         btnmore1.setText("More");
         btnmore1.setBorder(null);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
         jLabel4.setText("jLabel4");
 
         btnback.setBackground(new java.awt.Color(51, 51, 51));
@@ -219,7 +204,7 @@ public class formIndex1 extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -256,7 +241,7 @@ public class formIndex1 extends javax.swing.JFrame {
         GameBoard gb = new GameBoard();
         this.setVisible(false);
         gb.setVisible(true);
-
+        
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -278,13 +263,6 @@ public class formIndex1 extends javax.swing.JFrame {
         this.setVisible(false);
         fl.setVisible(true);
     }//GEN-LAST:event_btnlearn1ActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        formMore formMore = new formMore();
-        this.setVisible(false);
-        formMore.setVisible(true);
-    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments

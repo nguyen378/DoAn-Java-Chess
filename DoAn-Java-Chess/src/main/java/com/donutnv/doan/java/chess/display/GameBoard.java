@@ -55,6 +55,7 @@ public class GameBoard extends javax.swing.JFrame {
         setPieces(pieces);
         setBtns(btnsPiece, pieces, jPanelBoardGame);
     }
+    
 
 
     static void setBtns(ButtonPiece[][] btns, AbstractPiece[] pieces, JPanel panel) {

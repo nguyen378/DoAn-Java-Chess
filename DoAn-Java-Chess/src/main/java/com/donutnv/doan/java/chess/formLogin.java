@@ -261,11 +261,11 @@ public class formLogin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Login successfully");
 
            // Tạo một instance của form mới
-        formIndex2 index2 = new formIndex2();
+        formIndex1 index1 = new formIndex1();
         // Ẩn form đăng nhập hiện tại
         this.setVisible(false);
         // Hiển thị form mới
-        index2.setVisible(true);
+        index1.setVisible(true);
         }
         else{
             JOptionPane.showMessageDialog(this,"Invalid username or password","Failure",JOptionPane.ERROR_MESSAGE);

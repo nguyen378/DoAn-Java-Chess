@@ -19,7 +19,6 @@ public class formResetPass extends javax.swing.JFrame {
     public formResetPass() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,8 +46,6 @@ public class formResetPass extends javax.swing.JFrame {
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 143, 280, 0));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\R.png")); // NOI18N
         jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 260, 220));
 
         jLabel4.setFont(new java.awt.Font("Pristina", 1, 24)); // NOI18N
@@ -90,7 +87,7 @@ public class formResetPass extends javax.swing.JFrame {
         btncontinue.setBackground(new java.awt.Color(102, 102, 102));
         btncontinue.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         btncontinue.setForeground(new java.awt.Color(255, 255, 255));
-        btncontinue.setText("CONTINEU");
+        btncontinue.setText("CONTINUE");
         btncontinue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncontinueActionPerformed(evt);

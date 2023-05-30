@@ -259,9 +259,6 @@ public class formIndex2 extends javax.swing.JFrame {
 
     private void btnmoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoreActionPerformed
 
-        formMore formMore = new formMore();
-        this.setVisible(false);
-        formMore.setVisible(true);
     }//GEN-LAST:event_btnmoreActionPerformed
 
     /**

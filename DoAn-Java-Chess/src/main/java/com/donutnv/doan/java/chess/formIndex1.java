@@ -42,7 +42,6 @@ public class formIndex1 extends javax.swing.JFrame {
         btnlearn1 = new javax.swing.JButton();
         btnnews1 = new javax.swing.JButton();
         btnmore1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         btnback = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -92,29 +91,16 @@ public class formIndex1 extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(51, 51, 51));
-        jButton5.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("News");
-        jButton5.setBorder(null);
-
-        jButton7.setBackground(new java.awt.Color(51, 51, 51));
-        jButton7.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("More");
-        jButton7.setBorder(null);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
         btnmore1.setBackground(new java.awt.Color(51, 51, 51));
         btnmore1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
         btnmore1.setForeground(new java.awt.Color(255, 255, 255));
         btnmore1.setText("More");
         btnmore1.setBorder(null);
-
-        jLabel4.setText("jLabel4");
+        btnmore1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         btnback.setBackground(new java.awt.Color(51, 51, 51));
         btnback.setFont(new java.awt.Font("Tempus Sans ITC", 0, 10)); // NOI18N
@@ -131,7 +117,6 @@ public class formIndex1 extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,9 +133,7 @@ public class formIndex1 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(btnback)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addComponent(btnplay1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnlearn1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,7 +141,7 @@ public class formIndex1 extends javax.swing.JFrame {
                 .addComponent(btnnews1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnmore1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         jButton6.setBackground(new java.awt.Color(51, 51, 51));
@@ -182,10 +165,6 @@ public class formIndex1 extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\bcm.jpg")); // NOI18N
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\bcm.jpg")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -236,7 +215,9 @@ public class formIndex1 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 33, Short.MAX_VALUE))
         );
 
         pack();
@@ -244,11 +225,9 @@ public class formIndex1 extends javax.swing.JFrame {
 
     private void btnnews1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnews1ActionPerformed
         // TODO add your handling code here:
-        try{
-            Desktop.getDesktop().browse(new URL("https://vnexpress.net/the-thao/cac-mon-khac/co-vua").toURI());
-        }
-        catch(IOException | URISyntaxException e)
-        {}
+       formNews gb = new formNews();
+        this.setVisible(false);
+        gb.setVisible(true);
     }//GEN-LAST:event_btnnews1ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -332,7 +311,6 @@ public class formIndex1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;

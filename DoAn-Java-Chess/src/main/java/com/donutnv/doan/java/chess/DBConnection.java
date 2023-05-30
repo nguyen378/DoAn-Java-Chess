@@ -14,7 +14,7 @@ import java.sql.SQLException;
  * @author Chi Nguyen
  */
 public class DBConnection {
-   public static void main(String[] args) {
+   public static void main(String args) {
         Connection conn = null;
         String url = "jdbc:sqlserver://MSI\\SQLEXPRESS:1433;databaseName=Doan_Java_Chess";
         

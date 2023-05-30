@@ -40,7 +40,6 @@ public class formIndex2 extends javax.swing.JFrame {
         btnwatch = new javax.swing.JButton();
         btnnews = new javax.swing.JButton();
         btnmore = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         btnplayonline = new javax.swing.JButton();
@@ -117,9 +116,6 @@ public class formIndex2 extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\logom.jpg")); // NOI18N
-        jLabel4.setText("jLabel4");
-
         jButton9.setBackground(new java.awt.Color(102, 102, 102));
         jButton9.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,7 +140,6 @@ public class formIndex2 extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -166,9 +161,7 @@ public class formIndex2 extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
+                .addGap(54, 54, 54)
                 .addComponent(btnplay, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnpuzzles, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -197,8 +190,6 @@ public class formIndex2 extends javax.swing.JFrame {
                 btnplayonlineActionPerformed(evt);
             }
         });
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Chi Nguyen\\Downloads\\abancooo.jpg")); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Pristina", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -454,7 +445,6 @@ public class formIndex2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

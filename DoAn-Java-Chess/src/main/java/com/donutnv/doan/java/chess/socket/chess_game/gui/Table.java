@@ -39,7 +39,7 @@ public class Table {
         this.client = new Client(this);
         this.client.Connect("127.0.0.1", 4000);
         if (this.client.socket == null) {
-            JOptionPane.showMessageDialog(null, "Servera bağlanılamadı");
+            JOptionPane.showMessageDialog(null, "Server chua khoi tao");
             System.exit(0);
         }
         createMainMenu();
